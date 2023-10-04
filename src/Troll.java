@@ -98,17 +98,4 @@ public class Troll {
         int attacco = random.nextInt(puntiFerita);
         return attacco;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
