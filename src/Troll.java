@@ -1,5 +1,6 @@
 import javax.swing.plaf.SpinnerUI;
 import java.util.Objects;
+import java.util.Random;
 
 public class Troll {
     private String nome;
@@ -90,6 +91,15 @@ public class Troll {
             throw new Exception("La cura deve essere > 0");
         }
     }
+
+    public int attaccaConTroll(){
+        Random random;
+        random = new Random();
+        int attacco = random.nextInt(puntiFerita);
+        return attacco;
+    }
+
+
 
 
 
