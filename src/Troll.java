@@ -47,6 +47,13 @@ public class Troll {
         }
     }
 
+    public String toString(){
+        String str = "";
+        str = str+ "NOME: " +nome + " HP:"+ puntiFerita;
+        return str;
+    }
+
+
 
 
 }
