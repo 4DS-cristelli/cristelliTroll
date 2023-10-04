@@ -83,6 +83,14 @@ public class Troll {
         return vivo;
     }
 
+    public void curaTroll(int cura)throws Exception{
+        if(cura>0){
+            puntiFerita = puntiFerita+cura;
+        }else{
+            throw new Exception("La cura deve essere > 0");
+        }
+    }
+
 
 
 
