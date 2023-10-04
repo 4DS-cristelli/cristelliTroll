@@ -1,3 +1,4 @@
+import javax.swing.plaf.SpinnerUI;
 import java.util.Objects;
 
 public class Troll {
@@ -63,6 +64,23 @@ public class Troll {
         str = str+ "NOME: " +nome + " HP:"+ puntiFerita;
         return str;
     }
+
+    public boolean danneggiaTroll(int danno)throws Exception{
+        if(danno>= 0){
+            if(puntiFerita-danno >= 0){
+                puntiFerita = puntiFerita - danno;
+            }else{
+                puntiFerita = 0;
+                vivo = false;
+            }
+        }else{
+            throw new Exception("Il danno non può essere negativo");
+        }
+        return vivo;
+    }
+
+
+
 
 
 
