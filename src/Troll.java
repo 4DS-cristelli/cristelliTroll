@@ -18,6 +18,11 @@ public class Troll {
         }
     }
 
+    public Troll(Troll t1){
+        this.nome = t1.nome;
+        this.puntiFerita = t1.puntiFerita;
+    }
+
     public int getPuntiFerita() {
         return puntiFerita;
     }
@@ -41,5 +46,7 @@ public class Troll {
             throw new Exception("Nome errato");
         }
     }
+
+
 
 }
