@@ -66,18 +66,24 @@ public class Troll {
     }
 
     public boolean danneggiaTroll(int danno)throws Exception{
-        if(danno>= 0){
-            if(puntiFerita-danno >= 0){
-                puntiFerita = puntiFerita - danno;
+        if(vivo){
+            if(danno>= 0){
+                if(puntiFerita-danno >= 0){
+                    puntiFerita = puntiFerita - danno;
+                }else{
+                    puntiFerita = 0;
+                    vivo = false;
+                }
             }else{
-                puntiFerita = 0;
-                vivo = false;
+                throw new Exception("Il danno non può essere negativo");
             }
         }else{
-            throw new Exception("Il danno non può essere negativo");
+            throw new Exception("Il troll è gia morto");
         }
         return vivo;
     }
+
+
 
 
 
