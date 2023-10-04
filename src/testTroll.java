@@ -29,7 +29,7 @@ public class testTroll {
             System.out.println(e.getMessage());
         }
         try {
-            System.out.println("Attacco del troll"+t1.attaccaConTroll());
+            System.out.println("Attacco del troll: "+t1.attaccaConTroll());
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
@@ -43,7 +43,7 @@ public class testTroll {
         try {
             tmp = t1.danneggiaTroll(10);
             System.out.println("Il troll ora ha: "+t1.getPuntiFerita()+" puntiFerita");
-            System.out.println("Il troll è vivo ?"+ tmp);
+            System.out.println("Il troll è vivo ? "+ tmp);
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
