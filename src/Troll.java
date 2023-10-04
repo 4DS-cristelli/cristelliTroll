@@ -4,11 +4,14 @@ public class Troll {
     private String nome;
     private int puntiFerita;
 
+    private boolean vivo;
+
     public Troll(String nome, int puntiFerita)throws Exception{
         if(puntiFerita>= 0){
             if(nome != null && !nome.equals("")){
                 this.puntiFerita = puntiFerita;
                 this.nome = nome;
+                vivo = true;
             }else{
                 throw new Exception("Nome errato");
             }
@@ -25,6 +28,10 @@ public class Troll {
 
     public int getPuntiFerita() {
         return puntiFerita;
+    }
+
+    public boolean isVivo() {
+        return vivo;
     }
 
     public String getNome() {
@@ -47,11 +54,17 @@ public class Troll {
         }
     }
 
+    public void setVivo(boolean vivo) {
+        this.vivo = vivo;
+    }
+
     public String toString(){
         String str = "";
         str = str+ "NOME: " +nome + " HP:"+ puntiFerita;
         return str;
     }
+
+
 
 
 
